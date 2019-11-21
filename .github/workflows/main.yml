@@ -1,6 +1,10 @@
-on: push
 name: WebseCI
-jobs:
+on:
+  watch:
+    types: [started]
+    branches:
+      - master
+jobs:  
   test:
     name: Webse
     runs-on: macOS-latest
